@@ -1,0 +1,43 @@
+name: minor_project
+description: A new Flutter project.
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  razorpay_flutter:
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints:
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/sophia2.jpeg
+    - assets/official3.jpeg
+    - lib/img/backg11.jpeg
+    - assets/heyy.jpeg
+    - lib/img/letsgo.jpeg
+    - lib/img/register.jpeg
+    - lib/img/rog5.jpg
+
+  
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
