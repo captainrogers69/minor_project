@@ -2,16 +2,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:minor_project/login.dart';
-import 'package:minor_project/register.dart';
-import 'drawer.dart';
+import 'package:minor_project/pages/drawer.dart';
+import 'package:minor_project/pages/login.dart';
+import 'package:minor_project/pages/register.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({ Key key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({ Key? key}) : super(key: key);
+  const MyHomePage({ Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -42,19 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Row(
           children: [
             const SizedBox(width: 77.0,),
-            const Text('Minor_Project'),
-            const SizedBox(width: 65.0,),
-            ButtonTheme(
-              buttonColor: Colors.redAccent,
-              minWidth: 15.0,
-              // ignore: deprecated_member_use
-              child: RaisedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },     /////////////////////////
-              child: const Icon(Icons.close)
-              ),
-            ),
+            const Text('Minor_Project'),            
           ],
         ),
       ),
@@ -95,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: RaisedButton(
                 child: const Text('LOGIN', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.redAccent)),
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const login()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> login()));
                },
               ),
             ),
@@ -106,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: RaisedButton(
                 child: const Text('REGISTER', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const register()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> register()));
                 },
               ),
             ),
